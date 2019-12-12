@@ -1,2 +1,2 @@
-# ampare
-Website for law firm
+# Ampare law firm
+Jekyll theme for law firm based on Voyager by redVi.
