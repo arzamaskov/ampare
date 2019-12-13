@@ -1,0 +1,12 @@
+User-agent: *
+Disallow: /assets/
+Disallow: /readme.md
+
+User-agent: GoogleBot
+Disallow: /readme.md
+
+User-agent: Yandex
+Disallow: /readme.md
+
+Sitemap: https://ampare/sitemap.xml
+Host: ampare.ru

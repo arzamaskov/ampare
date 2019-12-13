@@ -1,0 +1,33 @@
+{% if page.url == "/posts/" %}
+<footer class="blog-footer content-wrapper">
+  <p>&copy; 2017-<span class="full-year"></span> {{ site.title }} &bull; <a href="/contacts/">Адреса и телефоны</a> &bull; <a href="/posts/cookies-policy">Политика использования файлов cookie</a></p>
+</footer>
+<script
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="crossorigin="anonymous">
+  </script>
+   <!-- <script src="{{ site.baseurl }}/assets/js/jquery.scrollie.min.js"></script> -->
+  <script src="{{ site.baseurl }}/assets/js/jekyll-search.min.js"></script>
+  <script src="{{ site.baseurl }}/assets/js/scripts.js"></script>
+  <script>
+	SimpleJekyllSearch({
+	  searchInput: document.getElementById('search-input'),
+	  resultsContainer: document.getElementById('results-container'),
+	  json: '/search.json',
+	  searchResultTemplate: '<li><a href="{url}" title="{title}">{title}</a></li>',
+	  noResultsText: '<li class="no-results">Результатов не найдено :(</li>',
+	  limit: 10,
+	  fuzzy: false
+    	});
+  </script>
+  <script type="text/javascript" src="//cdn.perezvoni.com/widget/js/przv.js?przv_code=28623-912d9d440e6c11741-c16c7f-cc-6c7fd752-9d440e6c11741" ></script>
+{% else %}
+  <footer class="blog-footer content-wrapper">
+    <p>&copy; 2017-<span class="full-year"></span> {{ site.title }} &bull; <a href="/contacts/">Адреса и телефоны</a> &bull; <a href="/posts/cookies-policy">Политика использования файлов cookie</a></p>
+  </footer>
+  <!-- <script
+    	   src="https://code.jquery.com/jquery-3.3.1.slim.min.js"integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="crossorigin="anonymous">
+  	</script>
+    	<script src="{{ site.baseurl }}/assets/js/jquery.scrollie.min.js"></script> -->
+  <script src="{{ site.baseurl }}/assets/js/scripts.js"></script>
+  <script type="text/javascript" src="//cdn.perezvoni.com/widget/js/przv.js?przv_code=28623-912d9d440e6c11741-c16c7f-cc-6c7fd752-9d440e6c11741" ></script>
+{% endif %}

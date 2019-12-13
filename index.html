@@ -1,0 +1,69 @@
+---
+bg: "lawyer.jpg"
+layout: default
+crawlertitle: "Юридическая компания Ампаре"
+title: "Ампаре"
+summary: ""
+---
+
+<section class="main-page">
+  <h1>Профессиональная правовая помощь</h1>
+  <p>
+    Юридическая компания &laquo;Ампаре&raquo; защищает интересы клиентов с&nbsp;помощью консультаций, составления документов, переговоров и&nbsp;судебного представительства.
+  </p>
+
+  <p>
+    Наша специализация&nbsp;&mdash; судебные споры. Проанализируем ситуацию, разработаем стратегию защиты, подготовим и&nbsp;направим претензию, составим исковое заявление, поможем с&nbsp;проведением необходимых экспертиз и&nbsp;сбором доказательств.
+  </p>
+  
+  <p>Сотрудничаем с&nbsp;экспертами по&nbsp;всем направлениям.</p>
+  
+  <h2>
+    К&nbsp;нам обращаются
+  </h2>
+  <p>
+    <strong>Частные лица:</strong> когда продавец не&nbsp;принимает бракованный товар, страховая компания отказывает в&nbsp;ремонте, случился пролив или причинен другой вред имуществу, застройщик передал квартиру с&nbsp;недостатками, навязали кредитный договор или ненужную услугу.
+  </p>    
+  <p>
+    <strong>Организации и&nbsp;предприниматели:</strong> для взыскания долгов, расторжения не&nbsp;исполняемых договоров и&nbsp;взыскания убытков, а&nbsp;также составления договоров с&nbsp;учетом специфики бизнеса.
+  </p>
+  <p>
+    Если ваши права нарушены, позвоните нам: <a href="tel:+79603660010" class="phone" title="Позвонить по номеру +7 960 366-00-10"><strong>+7&nbsp;960 360-00-10</strong></a>
+  </p>
+</section>
+
+<section class="main-page">
+
+  <a class="link-left" href="/about/">Наши принципы</a>
+</section>
+
+<section class="main-page">
+  <h2 class="cases-title">Последние проекты</h2>
+  {% for post in site.posts limit: 3 %}
+    {% if post.tags contains 'практика' %}
+    <a href="{{ post.url | relative_url }}">    
+      <article class="main-page-blog">
+        <h3>{{ post.title }}</h3>
+        {{ post.summary }}
+      </article>
+    </a>
+    {% endif %}
+  {% endfor %}
+  <p><a class="link-left"  href="/posts/#практика">Вся практика</a></p>
+</section>
+
+<section class="main-page">
+  <h2 class="cases-title">Новые записи</h2>
+  {% for post in site.posts limit: 10 %}
+    {% if post.tags contains 'практика' %}
+    {% else %}
+    <a href="{{ post.url | relative_url }}"> 
+     <article class="main-page-blog">
+      <h3>{{ post.title }}</h3>
+      {{ post.summary }}
+      </article>
+    </a>  
+    {% endif %}
+  {% endfor %}
+  <p><a class="link-left"  href="/posts/">Все статьи</a></p>
+</section>
